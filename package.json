@@ -16,8 +16,7 @@
   "author": "Reinoud Kruithof <reinoud.kruithof@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodeunit": "^0.9.1",
-    "tmp": "0.0.28"
+    "nodeunit": "^0.9.1"
   },
   "dependencies": {
     "csv": "^0.4.6",

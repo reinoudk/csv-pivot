@@ -20,10 +20,10 @@ var convert = function convert (options) {
     options = options || {};
 
     if (
-        "path" != typeof options.input ||
-        "path" != typeof options.output
+        "undefined" === typeof options.input ||
+        "undefined" === typeof options.output
     ) {
-        throw Error('In- and output must be specified as paths.');
+        throw Error('In- and output must be specified.');
     }
     input = fs.createReadStream(options.input);
     output = fs.createWriteStream(options.output);

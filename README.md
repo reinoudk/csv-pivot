@@ -17,8 +17,8 @@ Last, specify the column that contains the names for your vertical axis (might n
 ```JavaScript
 var convert = require('matrix-to-relation');
 
-var input = fs.createReadStream(path.resolve(__dirname, './data/crosses.in.csv'));
-var output = fs.createWriteStream(path.resolve(__dirname, './tmp/crosses.out.csv'));
+var input = path.resolve(__dirname, './input.csv');
+var output = path.resolve(__dirname, './output.csv');
 var outputColumns = { name: "vertical-axis", value: "horizontal-axis"};
 var nameColumn = "vertical-axis-column-name";
 

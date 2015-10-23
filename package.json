@@ -2,7 +2,7 @@
   "name": "matrix-to-relation",
   "version": "0.0.1",
   "description": "Build many-to-many relations from a (csv) matrix.",
-  "repository": "github.com:reinoudk/csv-to-relation.git",
+  "repository": "https://github.com/reinoudk/matrix-to-relation/",
   "main": "index.js",
   "scripts": {
     "test": "nodeunit test"

@@ -12,20 +12,19 @@ exports.transform = function (test) {
     output = fs.createWriteStream(path.resolve(__dirname, './tmp/crosses.out.csv'));
     outputColumns = { name: "name", value: "value"};
     parser = csv.parse({ columns: true });
-    stringify = csv.stringify({ header:true, columns: outputColumns});
+    stringify = csv.stringify({ header:true, columns: outputColumns, eof: false});
     transform = new Transform();
 
     input
-        // FIXME: finish not triggering
-        .on('finish', () => {
+        .on('close', () => {
             output.end();
+            test.equals(
+               fs.readFileSync(path.resolve(__dirname, './tmp/crosses.out.csv'), "utf8"),
+               fs.readFileSync(path.resolve(__dirname, './data/crosses.out.csv'), "utf8"),
+              "The generated file should match the reference file."
+            );
 
-            // Check if generated file is correct
-            test.equals(fs.readFileSync(path.resolve(__dirname, './tmp/crosses.out.csv'), "utf8"), fs.readFileSync(path.resolve(__dirname, './data/crosses.out.csv'), "utf8"));
-
-            // Remove temp file
             fs.unlinkSync(path.resolve(__dirname, './tmp/crosses.out.csv'));
-
             test.done();
         })
         .on('error', e => console.log("Error loading input: " + e))

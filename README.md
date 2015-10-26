@@ -15,6 +15,7 @@ You also need to name the two output columns. (This might become optional).
 Last, specify the column that contains the names for your vertical axis (might not be the first one).
 
 ```JavaScript
+var path = require('path');
 var convert = require('matrix-to-relation');
 
 var input = path.resolve(__dirname, './input.csv');
@@ -30,3 +31,6 @@ convert(options);
 ```
 
 The conversion is a streaming operation. More docs on this will follow.
+
+## TODO
+Improve docs with examples.

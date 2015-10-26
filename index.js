@@ -8,7 +8,7 @@ var Transform = require('./lib/transform');
 /**
  * @param {Object} options
  * @param {path} options.input Location of the input CSV
- * @param {path} options.ouput Location of the output CSV
+ * @param {path} options.output Location of the output CSV
  * @param {Object} options.outputColumns Names of the output columns
  * @param {Object} options.outputColumns.name Header for the values on the vertical axis
  * @param {Object} options.outputColumns.value Header for the values on the horizonal axis

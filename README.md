@@ -26,7 +26,7 @@ The default marker is an ```x```, you can change this by setting ```options.mark
 
 ```JavaScript
 var path = require('path');
-var convert = require('matrix-to-relation');
+var markerPivot = require('csv-pivot').markerPivot;
 
 var input = path.resolve(__dirname, './input.csv');
 var output = path.resolve(__dirname, './output.csv');
@@ -37,7 +37,7 @@ var nameColumn = "name";
 var options = { input, output, outputColumns, nameColumn };
 
 // Perform conversion
-convert(options);
+markerPivot.unpivot(options);
 
 /*
 input: 

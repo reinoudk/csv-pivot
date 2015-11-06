@@ -1,6 +1,6 @@
 {
   "name": "csv-pivot",
-  "version": "1.0.2",
+  "version": "2.0.0-alpha",
   "description": "Pivot or unpivot CSV data.",
   "repository": "https://github.com/reinoudk/csv-pivot/",
   "main": "index.js",

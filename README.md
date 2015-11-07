@@ -3,7 +3,7 @@ Small lib to pivot or unpivot csv data. **Currently only supports unpivot. Also,
 
 ## Installation
 ```bash
-npm install --save matrix-to-relation
+npm install --save csv-pivot
 ```
 
 ## Features
